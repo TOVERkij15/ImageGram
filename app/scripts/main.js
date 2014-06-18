@@ -27,48 +27,45 @@ $('.button').click(function(){
 		
 		console.log('refresh bitch!')
 			},
-			error: function(object,error) {
+			error: function(imageGram,error) {
 
 		}
 });
-//collection
-var ImageGramCollection = Parse.Collection.extend({
-	model:ImageGram
-});
 
-var collection = new ImageGramCollection();
+/*ImageGram = Parse.Object.extend("ImageGram");
 
-		collection.fetch({
-			success: function(collection){
-		collection.each(function(objects){
-			console.log('objects');
-		});
+query = new Parse.Query(ImageGram);
+
+query.equalTo('url',false)
+query.limit = 10;
+query.descending('createdAt');
+
+query.find({
+	success: function(results){
+
 	},
-			error: function(collection,error){
+	error: function(error){
 
 	}
-	});
-
-//view
-/*var ImageGramView = Parse.View.extend({
-	className: 'ImageGram',
-
-	template: _.template($('.image-template').text()),
-
-
-	initialize: function(){
-	$('.image-container').append(this.el);
-	this.render();
-},
-
-	render:function(ImageGram){
-	if(this.model.attributes.hasOwnProperty('url')){
-		var renderedTemplate = this.template(this.model.attributes);
-		this.$el.html(renderedTemplate);
-	}
-},
 });*/
 
+
+
+
+
+
+ 
+/*var ImageGram = Parse.Object.extend("ImageGram");
+var query = new Parse.Query(ImageGram);
+query.get("ohIqjrBFIK",{
+	success: function(objects) {
+	},
+	error: function(objects, error) {
+
+	}
+});*/
+
+ 
 
 //To create a new post with a single comment 
 //Types
@@ -96,21 +93,6 @@ Imagepost.fetch({
     var title = Imagepost.get("title");
   }
 });*/
-
-
-var ImageGram = Parse.Object.extend("ImageGram");
-var query = new Parse.Query(ImageGram);
-query.get("YdKMxS47OC",{
-	success: function(objects) {
-	},
-	error: function(objects, error) {
-
-	}
-});
-
- 
-
-
 
 
 

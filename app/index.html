@@ -30,9 +30,10 @@
     
 
         <script type= "text/template" class= "image-template">
-            <div class="image-container">
-                    <img src="<%= photo %>">
-                </div>
+            <div class= "image-container">
+            <img src= "<% URL %>"> 
+           
+            </div>
         </script>
 
 
@@ -43,6 +44,8 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+
         <!-- endbower -->
         <!-- endbuild -->
         <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
@@ -58,6 +61,8 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/view.js"></script>
+        <script src="scripts/collections.js"></script>
         <!-- endbuild -->
 </body>
 </html>
