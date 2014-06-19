@@ -1,9 +1,4 @@
 Parse.initialize("MaYyxQU280uNPxkOE52SHC2FyIBPulTOHcXFPtTV", "Vq6YQDoSdt49lG2tyBYbP7oZKpIzFkggUsHMXv0w");
-//Creates a new subclass of parse objects.
-var ImageGram = Parse.Object.extend({
-	className: "ImageGram",
-});
-
 //Creates a new instance of that class.
 var imageGram = new ImageGram();
 //saves url and caption inputs
@@ -19,19 +14,31 @@ $('.button').click(function(){
 				console.log('errors')
 			}
 		});
-	})
+	});
 
-//refresh object
-		imageGram.fetch({
-			success: function(imageGram){
+var collection = new ImageGramCollection();
+
+collection.fetch({add:true}).done(function() {
+	collection.each(function(imageGramModel) {
+		// console.log(collection);
+		// console.log(imageGramModel);
+		new ImageGramView({model: imageGramModel});
+		// console.log(ImageGramView);
 		
-		console.log('refresh bitch!')
-			},
-			error: function(imageGram,error) {
-
-		}
+	});
 });
 
+// var collection = new ImageGramCollection();
+// 	collection.fetch({
+//   success: function(collection) {
+//     collection.each(function(object) {
+//       console.log(object);
+//     });
+//   },
+//   error: function(collection, error) {
+    
+//   }
+// });
 /*ImageGram = Parse.Object.extend("ImageGram");
 
 query = new Parse.Query(ImageGram);

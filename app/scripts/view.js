@@ -2,20 +2,21 @@
 
 //view
 var ImageGramView = Parse.View.extend({
-	className: 'imageGram',
+	className: 'images',
 
 	template: _.template($('.image-template').text()),
 
-
 	initialize: function(){
-	$('.image-container').append(this.model);
-	this.render();
-},
+		$('.container').append(this.el)
+		this.render();
+	},
 
 	render: function() {
-		var renderTemplate = this.template(this.model)
-		this.$el.html(renderTemplate);
+		var renderedTemplate = this.template(this.model.attributes)
+		this.$el.html(renderedTemplate);
 		return this;
+		
+	},
 	
-	}
 });
+
