@@ -24,17 +24,8 @@ body {
 
 
 .container {
-    display: block;
-    height: 1000px;
-    width: 1000px;
-    margin-left: 150px;
-    padding:10px;
-    border-top: 20px solid black;
-    border-bottom: 110px solid black;
-    border-right: 20px solid black;
-    border-left: 20px solid black;
-    border-radius: 20px;
-    background-color: white;
+    float: left;
+   
 
     
     input {
@@ -61,7 +52,19 @@ body {
     }
     
 
+.detail-container {
+   display:inline-block;
+    height: 400px;
+    width: 400px;
+    padding:10px;
+    border-top: 20px solid black;
+    border-bottom: 110px solid black;
+    border-right: 20px solid black;
+    border-left: 20px solid black;
+    border-radius: 20px;
+    background-color: white;
 
+}
 
 
 

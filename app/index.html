@@ -13,28 +13,44 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <script src="../bower_components/fabric/dist/fabric.js"></script>
+
         <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+         <div class= "title"> ImageGram </div>
+            <canvas id= "c"></canvas>
+            <img src= "" id ="My-image">
+            <canvas id="canvas" width="1500" height="300"></canvas>
+            <script>
+            var canvas = new fabric.Canvas('canvas');
+            </script>
+      
 
-        <div class= "title"> ImageGram </div>
-        <div class= "container"> 
-            <button class= "button"> Press Me </button>
+        
+        <div class= "container"> </div>
+            
+        
+        <div class= "detail-container">
+        <button class= "button"> Press Me </button>
             <input class= "add-photo-input" type= "text" placeholder= "url Here.">
             <input class= "captionInput" type="text" value= "<%= caption ? caption 'No Caption' %>"> 
             <input class= "comment" type= "text" placeholder= "Comment Here.">
         </div>
+    
 
     
         <script type= "text/template" class= "image-template">
         <div class= "image-container"></div>
         <img src="<%= url %>"> 
-       
-        </script>
+       </script>
 
+        <script type= "text/template" class= "second-image-template">
+       
+       </script>
 
 
         
@@ -44,6 +60,8 @@
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+         
+
 
         <!-- endbower -->
         <!-- endbuild -->
@@ -62,6 +80,7 @@
         <script src="scripts/collections.js"></script>
         <script src="scripts/view.js"></script> 
         <script src="scripts/main.js"></script>
+        <script src="scripts/fabric.js"></script>
         <!-- endbuild -->
 </body>
 </html>
