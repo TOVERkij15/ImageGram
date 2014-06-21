@@ -21,38 +21,41 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-         <div class= "title"> ImageGram </div>
-            <canvas id= "c"></canvas>
+         
+           
+<div class= "title"> ImageGram </div>
+            <canvas id= "c"> </canvas>
             <img src= "" id ="My-image">
-            <canvas id="canvas" width="1500" height="300"></canvas>
-            <script>
+            <canvas id="canvas" width="1500" height="600"></canvas>
+             <script>
             var canvas = new fabric.Canvas('canvas');
             </script>
-      
-
-        
-        <div class= "container"> </div>
-            
         
         <div class= "detail-container">
-        <button class= "button"> Press Me </button>
+            <!-- MAIN IMAGE -->
+            <button class= "button"> Press Me </button>
             <input class= "add-photo-input" type= "text" placeholder= "url Here.">
             <input class= "captionInput" type="text" value= "<%= caption ? caption 'No Caption' %>"> 
             <input class= "comment" type= "text" placeholder= "Comment Here.">
         </div>
-    
 
+       <div class= "container"> </div>    
+        
+      <!-- THUMNAILS -->   
+      
+          
     
         <script type= "text/template" class= "image-template">
         <div class= "image-container"></div>
-        <img src="<%= url %>"> 
-       </script>
+        <img class= "thumbnail-images" src="<%= url %>"> 
+        </script>
 
         <script type= "text/template" class= "second-image-template">
-       
-       </script>
+          <img class= "thumbnail-images" src="<%= url %>">
 
+        </script>
 
+ 
         
 
 

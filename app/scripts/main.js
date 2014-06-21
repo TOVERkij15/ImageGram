@@ -1,11 +1,13 @@
 Parse.initialize("MaYyxQU280uNPxkOE52SHC2FyIBPulTOHcXFPtTV", "Vq6YQDoSdt49lG2tyBYbP7oZKpIzFkggUsHMXv0w");
 //Creates a new instance of that class.
-var DetailView;
+// var DetailView;
+var imageInstance;
 var imageGram = new ImageGram();
 //saves url and caption inputs
 $('.button').click(function(){
 	imageGram.set('url', $('.add-photo-input').val());
 	imageGram.set('caption',$('.captionInput').val());
+	
 
 		imageGram.save(null,{
 			success: function(imageGram){
@@ -28,8 +30,6 @@ collection.fetch({add:true}).done(function() {
 		
 	});
 });
-
-
 
 // var collection = new ImageGramCollection();
 // 	collection.fetch({

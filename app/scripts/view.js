@@ -4,9 +4,12 @@
 var ImageGramView = Parse.View.extend({
 	className: 'images',
 
-	template: _.template($('.image-template').text()),
-
+	events: {
 	
+		'click .thumbnail-images' :'moveImage'
+	},
+	
+	template: _.template($('.image-template').text()),
 
 	initialize: function(){
 		$('.container').append(this.el)
@@ -19,7 +22,14 @@ var ImageGramView = Parse.View.extend({
 		return this;
 		
 	},
+	moveImage: function() {
+		
+		if (imageInstance == null) {
+			imageInstance = new DetailView({model: this.model});
+			console.log(this.model);
+		}
 
+	}
 });
 
 //Detail View
@@ -27,14 +37,19 @@ var ImageGramView = Parse.View.extend({
 var DetailView = Parse.View.extend({
 	secondTemplate: _.template($('.second-image-template').text()),
 
+
 	initialize: function(){
 		$('.detail-container').append(this.el);
 		this.render();
-},
+	},
 		render:function(){
-			var renderedTemplate = this.secondTemplate(this,model.attributes)
+			var renderedTemplate = this.secondTemplate(this.model.attributes)
 			this.$el.html(renderedTemplate);
 			return this;
-		},
+	},
+		
 });
+
+
+
 
