@@ -30,8 +30,8 @@
             <!-- MAIN IMAGE -->
             <button class= "button"> Press Me </button>
             <input class= "add-photo-input" type= "text" placeholder= "url Here.">
-            <input class= "captionInput" type="text" value= "<%= caption ? caption 'No Caption' %>"> 
-            <input class= "comment" type= "text" placeholder= "Comment Here.">
+            <input class= "captionInput" type="text" value= "">
+            <!--<input class= "comment" type= "text" placeholder= "Comment Here.">-->
         </div>
 
          <div class= "container"> </div>    
@@ -47,6 +47,7 @@
         <script type= "text/template" class= "image-template">
             <div class= "image-container"></div>
             <img class= "thumbnail-images" src="<%= url %>"> 
+            <%= caption %>
         </script>
 
         <script type= "text/template" class= "second-image-template">

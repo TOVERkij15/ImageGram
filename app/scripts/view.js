@@ -46,6 +46,8 @@ var DetailView = Parse.View.extend({
 			var renderedTemplate = this.secondTemplate(this.model.attributes)
 			this.$el.html(renderedTemplate);
 			return this;
+
+			this.model.on( 'change', this.render.bind(this));
 	},
 		
 });
