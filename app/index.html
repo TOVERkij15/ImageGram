@@ -23,13 +23,8 @@
         <![endif]-->
          
            
-<div class= "title"> ImageGram </div>
-            <canvas id= "c"> </canvas>
-            <img src= "" id ="My-image">
-            <canvas id="canvas" width="1500" height="600"></canvas>
-             <script>
-            var canvas = new fabric.Canvas('canvas');
-            </script>
+    <div class= "title"> ImageGram </div>
+        
         
         <div class= "detail-container">
             <!-- MAIN IMAGE -->
@@ -39,20 +34,23 @@
             <input class= "comment" type= "text" placeholder= "Comment Here.">
         </div>
 
-       <div class= "container"> </div>    
+         <div class= "container"> </div>    
+        <canvas id= "c"> </canvas>
+        <img src= "" id ="My-image">
+        <canvas id="canvas" width="1500" height="700"></canvas>
         
+        <script>
+            var canvas = new fabric.Canvas('canvas');
+        </script>
       <!-- THUMNAILS -->   
       
-          
-    
         <script type= "text/template" class= "image-template">
-        <div class= "image-container"></div>
-        <img class= "thumbnail-images" src="<%= url %>"> 
+            <div class= "image-container"></div>
+            <img class= "thumbnail-images" src="<%= url %>"> 
         </script>
 
         <script type= "text/template" class= "second-image-template">
           <img class= "thumbnail-images" src="<%= url %>">
-
         </script>
 
  
