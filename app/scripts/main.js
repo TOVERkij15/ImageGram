@@ -7,7 +7,7 @@ var imageGram = new ImageGram();
 $('.button').click(function(){
 	imageGram.set('url', $('.add-photo-input').val());
 	imageGram.set('caption',$('.captionInput').val());
-	
+
 
 		imageGram.save(null,{
 			success: function(imageGram){
@@ -29,6 +29,20 @@ collection.fetch({add:true}).done(function() {
 		// console.log(ImageGramView);
 		
 	});
+});
+
+
+/*var fileUploadControl = $("#profilePhotoFileUpload")[0];
+if (fileUploadControl.files.length > 0) {
+	var file = fileUploadControl.files[0];
+	var name = "photo.jpg";
+ 
+	var parseFile = new Parse.File(name, file);
+}
+parseFile.save().then(function() {
+  
+}, function(error) {
+  
 });
 
 // var collection = new ImageGramCollection();

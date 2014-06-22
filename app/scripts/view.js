@@ -49,6 +49,8 @@ var DetailView = Parse.View.extend({
 
 			this.model.on( 'change', this.render.bind(this));
 	},
+
+
 		
 });
 

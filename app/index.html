@@ -24,17 +24,21 @@
          
            
     <div class= "title"> ImageGram </div>
+
         
         
         <div class= "detail-container">
             <!-- MAIN IMAGE -->
             <button class= "button"> Press Me </button>
+            <button class= "save"> Save</button>
             <input class= "add-photo-input" type= "text" placeholder= "url Here.">
             <input class= "captionInput" type="text" value= "">
+            <input type="file" id="profilePhotoFileUpload">
             <!--<input class= "comment" type= "text" placeholder= "Comment Here.">-->
         </div>
 
          <div class= "container"> </div>    
+         <!-- THUMNAILS -->   
         <canvas id= "c"> </canvas>
         <img src= "" id ="My-image">
         <canvas id="canvas" width="1500" height="700"></canvas>
@@ -42,7 +46,8 @@
         <script>
             var canvas = new fabric.Canvas('canvas');
         </script>
-      <!-- THUMNAILS -->   
+
+      
       
         <script type= "text/template" class= "image-template">
             <div class= "image-container"></div>
