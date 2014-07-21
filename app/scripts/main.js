@@ -32,6 +32,10 @@ collection.fetch({add:true}).done(function() {
 });
 
 
+
+
+//var dataUrl = canvas.toDataURL();
+
 /*var fileUploadControl = $("#profilePhotoFileUpload")[0];
 if (fileUploadControl.files.length > 0) {
 	var file = fileUploadControl.files[0];

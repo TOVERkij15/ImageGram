@@ -2,83 +2,72 @@
 // endbower
 
 body {
-      /*background: url("http://1.bp.blogspot.com/_yLAItrjlaSA/TUXDbyosOTI/AAAAAAAAAIM/JMUQeuUcn44/s1600/rink.jpg")
-    no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
+    background-image: url("http://bglabs.evade.netdna-cdn.com/files/torn-cardboard-texture-2424.jpg");
+    background-size: cover;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: silver;
-    background:maroon;
-    
+    color: white;
+    text-align: center;
+    /*background-color: teal;*/
 }
 
 .title {
     display: block;
     height: 100px;
     width: 100%;
-    background-color:grey;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     padding:10px;
     font-weight: bold;
     font-size: 50px;
     text-align: center;
-    /*border: 20px solid black;
-    border-radius: 20px;*/
-
 }
 
 
 .container {
     float:left;
 
-  
-    /*input {
-        float:left;
-        width: 100px;
-        height: 20px;
-        border-radius: 5px;
-        border: 2px solid black;
-        background-color: white;*/
-    
     .images {
-        display:inline-block;
+        display: block;
         float:left;
         width: 200px;
         height: 200px;
         margin-left: 10px;
         margin-top: 20px;
+        padding: 10px;
        
         img {
             float:left;
             width: 100%;
             height: 200px;
-            margin-left: 10px;
+            margin-left: 50px;
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
         }
     }
 }
 
 .detail-container {
+    display: inline-block;
     float:left;
-    height: 600px;
-    width: 400px;
+    height: 800px;
+    width: 500px;
     padding:10px;
-    margin-top:20px;
-    border-top: 20px solid grey;
-    border-bottom: 110px solid grey;
-    border-right: 20px solid grey;
-    border-left: 20px solid grey;
+    margin-left: 350px;
+    margin-top:10px;
+    border-top: 20px solid black;
+    border-bottom: 110px solid black;
+    border-right: 20px solid black;
+    border-left: 20px solid black;
     border-radius: 20px;
     background-color: white;
-
+ 
         img {
             
             width: 100%;
             height: 0%;
             margin-top: 40px;
-    
-          
+            opacity: 0.6;
+            border-radius: 20px;
+
     }
 }
 
