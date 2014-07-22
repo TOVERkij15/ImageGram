@@ -4,7 +4,7 @@
 body {
     background-image: url("http://bglabs.evade.netdna-cdn.com/files/torn-cardboard-texture-2424.jpg");
     background-size: cover;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Shadows Into Light Two', cursive;
     color: white;
     text-align: center;
 }
@@ -47,7 +47,7 @@ body {
 .detail-container {
     display: inline-block;
     float:left;
-    height: 800px;
+    height: 500px;
     width: 500px;
     padding:10px;
     margin-left: 350px;
@@ -56,7 +56,7 @@ body {
     border-bottom: 110px solid #945;
     border-right: 20px solid #945;
     border-left: 20px solid #945;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: tan;
  
         img {
